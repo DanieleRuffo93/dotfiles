@@ -1,7 +1,11 @@
 -- General
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlights' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 vim.keymap.set('n', '<leader>pe', vim.cmd.Ex, { desc = 'Project [e]xplore' })
+vim.keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = '[W]rite buffer' })
+vim.keymap.set('n', '<leader>qq', '<cmd>qa<CR>', { desc = '[Q]uit All' })
+
+-- Diagnostic
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- Disable arrow keys
 vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>', { desc = 'Disabled: use h' })
@@ -16,6 +20,8 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Navigation
+vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Next match and center' })
+vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Prev match and center' })
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Scroll down and center' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll up and center' })
 
@@ -24,6 +30,8 @@ vim.keymap.set('i', '<C-c>', '<Esc>', { desc = 'Exit insert mode' })
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selection down' })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move selection up' })
 vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'Paste without yanking' })
+vim.keymap.set('n', '<leader>o', 'o<ESC>', { desc = 'New line below' })
+vim.keymap.set('n', '<leader>O', 'O<ESC>', { desc = 'New line above' })
 
 -- Terminal
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
