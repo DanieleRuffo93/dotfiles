@@ -1,8 +1,19 @@
+-- TODO: investigate mini.ai vaf/vif not working as expected. At least if I understood what I should be able to do
 return {
   'nvim-mini/mini.nvim',
   config = function()
     require('mini.ai').setup { n_lines = 500 }
-    require('mini.surround').setup()
+    require('mini.surround').setup {
+      mappings = {
+        add = 'gsa',
+        delete = 'gsd',
+        find = 'gsf',
+        find_left = 'gsF',
+        highlight = 'gsh',
+        replace = 'gsr',
+        update_n_lines = 'gsn',
+      },
+    }
 
     local statusline = require 'mini.statusline'
     statusline.setup { use_icons = vim.g.have_nerd_font }
