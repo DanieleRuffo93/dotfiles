@@ -22,6 +22,3 @@ vim.keymap.set('i', '<C-c>', '<Esc>')
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'Paste without yanking' })
-
-vim.keymap.set('n', '<leader>ca', function() require('cellular-automaton').start_animation 'make_it_rain' end)
-
