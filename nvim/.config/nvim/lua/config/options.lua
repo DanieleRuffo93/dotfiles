@@ -45,4 +45,3 @@ vim.diagnostic.config {
   virtual_lines = false,
   jump = { float = true },
 }
-
