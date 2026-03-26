@@ -5,7 +5,7 @@ return {
     delay = 0,
     icons = { mappings = vim.g.have_nerd_font },
     spec = {
-      { '<leader>g', group = 'Lazy [G]it', mode = { 'n', 'v' } },
+      { '<leader>g', group = '[G]it', mode = { 'n', 'v' } },
       { '<leader>h', group = '[H]arpoon', mode = { 'n', 'v' } },
       { '<leader>p', group = '[P]roject', mode = { 'n', 'v' } },
       { '<leader>q', group = '[Q]uickfix', mode = { 'n', 'v' } },
@@ -13,4 +13,3 @@ return {
     },
   },
 }
-
