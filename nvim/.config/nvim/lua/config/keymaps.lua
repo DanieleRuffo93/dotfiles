@@ -39,3 +39,8 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 -- Toggle
 vim.keymap.set('n', '<leader>tw', '<cmd>set wrap!<CR>', { desc = '[T]oggle [W]rap' })
 vim.keymap.set('n', '<leader>ts', '<cmd>set spell!<CR>', { desc = '[T]oggle [S]pell' })
+vim.keymap.set('n', '<leader>td', function() vim.diagnostic.enable(not vim.diagnostic.is_enabled()) end, { desc = '[T]oggle [D]iagnostics' })
+vim.keymap.set('n', '<leader>tf', function()
+  vim.g.disable_autoformat = not vim.g.disable_autoformat
+  vim.notify(vim.g.disable_autoformat and 'Autoformat disabled' or 'Autoformat enabled')
+end, { desc = '[T]oggle auto[F]ormat' })
