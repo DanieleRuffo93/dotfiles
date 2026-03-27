@@ -10,6 +10,7 @@ return {
       { '<leader>p', group = '[P]roject', mode = { 'n', 'v' } },
       { '<leader>q', group = '[Q]uickfix', mode = { 'n', 'v' } },
       { '<leader>s', group = '[S]earch', mode = { 'n', 'v' } },
+      { '<leader>t', group = '[T]oggle', mode = { 'n', 'v' } },
     },
   },
 }
