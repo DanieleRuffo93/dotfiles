@@ -14,8 +14,8 @@ return {
       local map = function(keys, func, desc) vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc }) end
 
       -- Navigation
-      map(']h', gitsigns.next_hunk, 'Next [H]unk')
-      map('[h', gitsigns.prev_hunk, 'Prev [H]unk')
+      map(']h', function() gitsigns.nav_hunk 'next' end, 'Next [H]unk')
+      map('[h', function() gitsigns.nav_hunk 'prev' end, 'Prev [H]unk')
 
       -- Actions
       map('<leader>gs', gitsigns.stage_hunk, '[S]tage hunk')

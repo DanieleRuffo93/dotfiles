@@ -50,6 +50,7 @@ return {
 
     -- lua_ls needs special configuration to understand Neovim's runtime
     vim.lsp.config('lua_ls', {
+      capabilities = capabilities,
       on_init = function(client)
         if client.workspace_folders then
           local path = client.workspace_folders[1].name

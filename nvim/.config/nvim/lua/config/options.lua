@@ -1,5 +1,5 @@
 -- Leader keys
--- NOTE: this must be first
+-- NOTE: this must be set before plugins load. Do not move
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
