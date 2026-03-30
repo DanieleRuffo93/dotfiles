@@ -1,6 +1,10 @@
 # dotfiles
 
-Personal configuration files for Neovim, tmux and whatever tool I will add to my personal stack. 
+Personal configuration files.
+
+Current tech stack:
+    - Nvim
+    - Tmux
 
 ## Setup
 
@@ -13,6 +17,7 @@ Personal configuration files for Neovim, tmux and whatever tool I will add to my
 git clone git@github.com:DanieleRuffo93/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 stow nvim
+stow tmux
 ```
 
 ## Structure
