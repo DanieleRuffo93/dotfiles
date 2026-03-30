@@ -2,23 +2,31 @@
 
 Personal configuration files.
 
-Current tech stack:
-    - Nvim
-    - Tmux
+## Stack
+
+- Neovim
+- tmux
 
 ## Setup
 
-### Dependencies
+### 1. Install dependencies
+```bash
+brew install neovim tmux stow node make
+```
 
-- [GNU Stow](https://www.gnu.org/software/stow/) — manages symlinks
-
-### Install
+### 2. Clone and stow
 ```bash
 git clone git@github.com:DanieleRuffo93/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 stow nvim
 stow tmux
 ```
+
+### 3. Post-install
+
+**Neovim** — open `nvim`, lazy.nvim bootstraps and installs all plugins automatically.
+
+**tmux** — open `tmux`, TPM bootstraps automatically. Then press `<C-Space> I` to install plugins.
 
 ## Structure
 
