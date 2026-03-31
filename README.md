@@ -6,6 +6,8 @@ Personal configuration files.
 
 - Neovim
 - tmux
+- ghostty
+- starship
 
 ## Setup
 
