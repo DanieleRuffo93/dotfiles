@@ -20,13 +20,16 @@ git clone git@github.com:DanieleRuffo93/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 stow nvim
 stow tmux
+stow ghostty
 ```
 
 ### 3. Post-install
 
-**Neovim** — open `nvim`, lazy.nvim bootstraps and installs all plugins automatically.
+**Neovim** - open `nvim`, lazy.nvim bootstraps and installs all plugins automatically.
 
-**tmux** — open `tmux`, TPM bootstraps automatically. Then press `<C-Space> I` to install plugins.
+**tmux** - open `tmux`, TPM bootstraps automatically. Then press `<C-Space> I` to install plugins.
+
+**ghostty** - opens directly in tmux.
 
 ## Structure
 

@@ -1,0 +1,24 @@
+# Font
+font-family = JetBrains Mono
+font-size = 15
+
+# Theme
+theme = Catppuccin Mocha 
+
+# Transparency
+background-opacity = 0.95
+background-blur-radius = 20
+
+# Window
+window-decoration = false
+window-padding-x = 10
+window-padding-y = 10
+
+# Terminal
+term = xterm-256color
+
+# Start tmux automatically
+command = /bin/zsh -c "tmux attach || tmux new-session -s main"
+
+# Shell integration
+shell-integration = zsh
