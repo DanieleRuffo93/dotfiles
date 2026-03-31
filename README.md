@@ -11,7 +11,7 @@ Personal configuration files.
 
 ### 1. Install dependencies
 ```bash
-brew install neovim tmux stow node make
+brew install neovim tmux stow node make starship
 ```
 
 ### 2. Clone and stow
@@ -21,6 +21,7 @@ cd ~/dotfiles
 stow nvim
 stow tmux
 stow ghostty
+stow starship
 ```
 
 ### 3. Post-install
