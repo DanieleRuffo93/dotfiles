@@ -20,9 +20,10 @@ return {
       pickers = {
         find_files = {
           hidden = true,
+          no_ignore = true,
         },
         live_grep = {
-          additional_args = { '--hidden' },
+          additional_args = { '--hidden', '--no-ignore-vcs' },
         },
       },
       extensions = {
