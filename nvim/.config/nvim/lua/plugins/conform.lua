@@ -26,6 +26,9 @@ return {
       cpp = { 'clang-format' },
       python = { 'ruff_format' },
       rust = { 'rustfmt' },
+      html = { 'prettier' },
+      css = { 'prettier' },
+      javascript = { 'prettier' },
     },
   },
 }

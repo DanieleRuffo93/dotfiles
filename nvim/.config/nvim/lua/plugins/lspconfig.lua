@@ -37,6 +37,10 @@ return {
       'clang-format',
       'ruff',
       'rust-analyzer',
+      'html-lsp',
+      'css-lsp',
+      'typescript-language-server',
+      'prettier',
     })
 
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
