@@ -2,6 +2,7 @@
 
 Personal configuration files.
 Planning on fully switch to arch (btw), currently on Omarchy. Will udpates configs once fully commited.
+Will keep the bare minimum for windows compatibility with WSL.
 
 ## Stack
 
@@ -10,20 +11,35 @@ Planning on fully switch to arch (btw), currently on Omarchy. Will udpates confi
 - ghostty
 - starship
 - aerospace
+- zsh
 
 ## Setup
 
-### 1. Install dependencies
+### 1. Install Homebrew
+
+**macOS**
 ```bash
-brew install neovim tmux stow node make starship ripgrep fd fzf zoxide
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### 2. Clone and stow
+**WSL/Linux**
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+sudo apt update && sudo apt install -y build-essential
+```
+
+### 2. Install dependencies
+```bash
+brew install neovim tmux stow node make git starship ripgrep fd fzf zoxide eza bat lazygit go tree-sitter-cli zsh-autosuggestions zsh-syntax-highlighting
+```
+
+### 3. Clone and stow
 ```bash
 git clone git@github.com:DanieleRuffo93/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 stow nvim
 stow tmux
+stow zsh
 stow ghostty
 stow starship
 stow aerospace
@@ -37,6 +53,15 @@ stow aerospace
 
 **ghostty** - opens directly in tmux.
 
+**Zsh** - run `source ~/.zshrc` after stowing.
+
 ## Structure
 
 Each top-level folder is a Stow package mirroring `$HOME`.
+
+## Notes
+
+- `tree-sitter-cli` is required by nvim-treesitter (main branch) to compile parsers from source.
+- `go` is required by Mason to install gopls.
+- On WSL, `build-essential` is required by Homebrew to compile packages.
+- Aerospace and Ghostty are macOS/Linux only. WezTerm on Windows/WSL.
