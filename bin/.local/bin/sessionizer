@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+source "$HOME/.zshrc" 2>/dev/null
+
+SEARCH_DIRS="${SESSIONIZER_DIRS:-$HOME/dev}"
+EXTRA_PROJECTS="${SESSIONIZER_PROJECTS:-}"
+
+selected=$(printf "%s\n" $EXTRA_PROJECTS $(find $SEARCH_DIRS -mindepth 1 -maxdepth 1 -type d 2>/dev/null) | fzf --reverse --prompt="project: " --preview "eza --tree --level=3 --icons --color=always {}" --preview-window=right:50%)
+
+if [[ -z "$selected" ]]; then
+  exit 0
+fi
+
+session_name=$(basename "$selected" | tr '.' '_')
+
+if tmux has-session -t "$session_name" 2>/dev/null; then
+  tmux switch-client -t "$session_name"
+  exit 0
+fi
+
+layout_file="$selected/.tmux-layout"
+
+if [[ -f "$layout_file" ]]; then
+  bash "$layout_file" "$session_name" "$selected"
+else
+  tmux new-session -d -s "$session_name" -c "$selected"
+  tmux send-keys -t "$session_name" "nvim" Enter
+  tmux new-window -t "$session_name" -c "$selected"
+  tmux select-window -t "$session_name:1"
+fi
+
+if [[ -n "$TMUX" ]]; then
+  tmux switch-client -t "$session_name"
+else
+  tmux attach-session -t "$session_name"
+fi
