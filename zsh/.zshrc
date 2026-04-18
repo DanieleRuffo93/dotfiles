@@ -1,3 +1,7 @@
+export PATH="$HOME/.local/bin:$PATH"
+export SESSIONIZER_DIRS="$HOME/dev"
+export SESSIONIZER_PROJECTS="$HOME/dotfiles"
+
 # Homebrew setup - Must be first
 if [[ -x /home/linuxbrew/.linuxbrew/bin/brew ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
