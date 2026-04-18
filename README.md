@@ -40,6 +40,7 @@ cd ~/dotfiles
 stow nvim
 stow tmux
 stow zsh
+stow bin
 stow ghostty
 stow starship
 stow aerospace
